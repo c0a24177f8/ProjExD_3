@@ -152,6 +152,9 @@ class Score:
         img = self.fonto.render(f"スコア{self.score}",True,self.color)
         screen.blit(img,self.pos)
 def main():
+    """
+    main関数
+    """
     pg.display.set_caption("たたかえ！こうかとん")
     screen = pg.display.set_mode((WIDTH, HEIGHT))    
     bg_img = pg.image.load("fig/pg_bg.jpg")
