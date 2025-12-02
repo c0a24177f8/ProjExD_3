@@ -114,7 +114,7 @@ class Bomb:
         """
         引数に基づき爆弾円Surfaceを生成する
         引数1 color：爆弾円の色タプル
-        引数2 rad：爆弾円の半径
+        引数2 rad：爆弾円の半径...
         """
         self.img = pg.Surface((2*rad, 2*rad))
         pg.draw.circle(self.img, color, (rad, rad), rad)
