@@ -163,13 +163,13 @@ def main():
         
       
 
-        if beam and beam is not None:
-            if beam.rct.colliderect(bomb.rct):
+        if beam and beam is not None: # ビームが存在する場合
+            if beam.rct.colliderect(bomb.rct): # ビームと爆弾が衝突した場合
                 bomb = None
-                beam = None
-                bird.change_img(6, screen)
-        for b,bomb in enumerate(bombs):
-              if bomb is not None and bird.rct.colliderect(bomb.rct):
+                beam = None 
+                bird.change_img(6, screen) # ビーム発射画像に変更
+        for b,bomb in enumerate(bombs): # 爆弾が存在する場合
+              if bomb is not None and bird.rct.colliderect(bomb.rct): # こうかとんと爆弾が衝突した場合
             # ゲームオーバー時に，こうかとん画像を切り替え，1秒間表示させる
                 bird.change_img(8, screen)
                 fonto = pg.font.Font(None, 80)
